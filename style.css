@@ -1,6 +1,6 @@
 header {
     background-color: black;
-    padding: 1%;
+    padding: 0;
     width: 100vw;  /* Garante que ocupa toda a largura da tela */
     position: fixed;  /* Fixa o header no topo */
     top: 0;  /* Cola no topo da página */
@@ -18,13 +18,14 @@ header {
 }
 
 .logo {
-    max-width: 4em;
+    max-width: 8em;
+    margin-left: 1%;
 }
 
 h1 {
     color: white;
     font-size: 3.5em;
-    margin-left: 10px;
+    margin-left: 0.5%;
     flex-grow: 1; /* Ocupa o espaço disponível */
 }
 
@@ -184,4 +185,3 @@ body {
 #btnTopo:hover {
     background-color: #6a1fb9; /* Cor ao passar o mouse */
 }
-
