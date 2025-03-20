@@ -18,13 +18,13 @@ header {
 }
 
 .logo {
-    max-width: 8em;
+    max-width: 6em;
     margin-left: 1%;
 }
 
 h1 {
     color: white;
-    font-size: 3.5em;
+    font-size: 1.5em;
     margin-left: 0.5%;
     flex-grow: 1; /* Ocupa o espaço disponível */
 }
@@ -38,13 +38,19 @@ h1 {
 
 .menu h2 {
     margin: 0;
-    margin-right: 3em;
+    margin-left: 1em;
     color: white;
-    font-size: 20em;
+    font-size: 10em;
     cursor: pointer;
     transition: color 0.3s;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.4em; /* Ajusta o tamanho do texto */
+    font-size: 1.2em; /* Ajusta o tamanho do texto */
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none; /* Para navegadores WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer/Edge */
+    touch-action: manipulation; /* Evita gestos como o "toque longo" ativar a seleção */
+    
 }
 
 .menu h2:hover {
@@ -55,9 +61,6 @@ h1 {
     color: #872ccd;
 }
 
-h2 {
-    font-size: 4em;
-}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
