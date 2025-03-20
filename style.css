@@ -136,7 +136,7 @@ body {
 
     h1 {
         font-size: 1.6vh;
-        text-align: right;
+        text-align: left;
        
     }
 
@@ -150,7 +150,7 @@ body {
     .menu h2 {
         font-size: 1em; /* Ajusta o tamanho do texto para telas menores */
         margin-right: 0;
-        
+        align-items: right;
     }
 
     #btnTopo {
