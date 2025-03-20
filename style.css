@@ -7,7 +7,8 @@ header {
     top: 0;  /* Cola no topo da página */
     left: 0; /* Garante que começa no canto esquerdo */
     box-sizing: border-box; /* Garante que padding não afete a largura */
-
+    border: 1px solid #6a1fb9;  /* Borda fina preta */
+    box-shadow: 2px 2px 8px #6a1fb9; /* Sombra leve */
 }
 
 .header-container {
@@ -59,6 +60,11 @@ h2{
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;  /* Remove as margens padrão */
+    padding: 0; /* Remove espaçamentos internos */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+
+    
 }
 #btnTopo {
     display: none; /* Começa invisível */
@@ -79,3 +85,20 @@ body {
 #btnTopo:hover {
     background-color: #6a1fb9; /* Cor ao passar o mouse */
 }
+
+/* .caixa {
+    width: 100%;  /* Define a largura */
+    /*padding: 20px;  /* Espaçamento interno */
+    /*border: 2px solid #6a1fb9;  /* Borda fina preta */
+    /*border-radius: 10px; /* Deixa as bordas arredondadas */
+    /*background-color: #2f34b1; /* Cor do fundo */
+    /*box-shadow: 2px 2px 10px #6a1fb9; /* Sombra leve */
+    /*text-align: center; /* Centraliza o texto
+}
+
+.caixa h2{
+    font-size: 5em;
+    
+    color: white
+} 
+/*
