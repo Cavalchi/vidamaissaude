@@ -85,6 +85,42 @@ body {
     background-color: #6a1fb9; /* Cor ao passar o mouse */
 }
 
+/* Responsividade: ajustes para monitores pequenas */
+@media (max-width: 1595px) {
+    .header-container {
+        flex-direction: line; /* Empilha os itens na vertical */
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo {
+        max-width: 5%;
+    }
+
+    h1 {
+        font-size: 2vh;
+        text-align: left;
+       
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: line; /* Empilha os itens do menu verticalmente */
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .menu h2 {
+        font-size: 1em; /* Ajusta o tamanho do texto para telas menores */
+        margin-right: 0;
+        
+    }
+
+    #btnTopo {
+        display: block; /* Torna o botão de rolar para o topo visível */
+    }
+}
+
 /* Responsividade: ajustes para dispositivos móveis e telas pequenas */
 
 @media (max-width: 867px) {
@@ -100,7 +136,7 @@ body {
 
     h1 {
         font-size: 1.6vh;
-        text-align: left;
+        text-align: right;
        
     }
 
