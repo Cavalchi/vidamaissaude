@@ -1,0 +1,81 @@
+header {
+    background-color: black;
+    padding: 10px;
+    background-color: black;
+    width: 100vw;  /* Garante que ocupa toda a largura da tela */
+    position: fixed;  /* Fixa o header no topo */
+    top: 0;  /* Cola no topo da página */
+    left: 0; /* Garante que começa no canto esquerdo */
+    box-sizing: border-box; /* Garante que padding não afete a largura */
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 4em;
+}
+
+h1 {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    flex-grow: 1; /* Ocupa o espaço disponível */
+}
+
+.menu {
+    display: flex;
+    gap: 1em; /* Espaçamento entre os itens */
+    margin-right: 5em;
+}
+
+.menu h2 {
+    margin: 0;
+    margin-right: 3em;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; /* Ajusta o tamanho do texto */
+}
+
+.menu h2:hover {
+    color: #872ccd;
+}
+
+.menu h2:active {
+    color: #872ccd;
+}
+
+h2{
+    font-size: 2em;
+   
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#btnTopo {
+    display: none; /* Começa invisível */
+    position: fixed; /* Fica fixo na tela */
+    bottom: 20px; /* Distância do rodapé */
+    right: 20px; /* Distância da lateral direita */
+    background-color: #872ccd; /* Cor de fundo */
+    color: white; /* Cor do ícone */
+    border: none; /* Remove a borda */
+    padding: 10px 15px; /* Tamanho do botão */
+    font-size: 20px; /* Tamanho da seta */
+    border-radius: 50%; /* Deixa redondo */
+    cursor: pointer; /* Muda cursor para indicar clique */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: opacity 0.3s; /* Animação para sumir/aparecer */
+}
+
+#btnTopo:hover {
+    background-color: #6a1fb9; /* Cor ao passar o mouse */
+}

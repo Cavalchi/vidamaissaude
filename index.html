@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidamais Saúde</title>
+    <link rel="icon" href="WhatsApp_Image_2025-03-20_at_12.10.46-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="WhatsApp_Image_2025-03-20_at_12.10.46-removebg-preview.png" alt="Logo Vidamais Saúde" class="logo">
+            <h1>Vidamais Saúde</h1>
+            <div class="menu">
+                <h2>Contato</h2>
+                <h2>Pessoas</h2>
+                <h2>Carreira</h2>
+            </div>
+        </div>
+    </header>
+</body>
+<button id="btnTopo" onclick="voltarAoTopo()">▲</button>
+<script>
+    // Seleciona o botão
+    var btnTopo = document.getElementById("btnTopo");
+
+    // Mostra ou esconde o botão conforme o scroll
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            btnTopo.style.display = "block"; 
+        } else {
+            btnTopo.style.display = "none";
+        }
+    };
+    
+
+    function voltarAoTopo() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+</html>
