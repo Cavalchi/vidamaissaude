@@ -73,13 +73,17 @@ body {
 }
 /* Imagem de fundo estática */
 .imgcorpo {
-    max-width: 70em;
-    margin-top: 5%;
-    margin-left: 20%;
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção original */
+    max-width: none; /* Remove qualquer limitação de largura */
+    margin-top: 11%;
+    margin-left: 18%; /* Remove margem lateral para ocupar toda a largura */
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     display: block;
 }
+
+
 /* Estilização do carrossel */
 .carousel-container {
     position: relative;
