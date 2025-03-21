@@ -69,6 +69,14 @@ h1 {
 .menu h2:active {
     color: #872ccd;
 }
+.menu a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor do texto original */
+}
+
+.menu a:hover h2 {
+    color: #663399; /* Adiciona um efeito de cor ao passar o mouse */
+}
 
 
 body {
