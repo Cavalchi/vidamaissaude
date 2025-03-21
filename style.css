@@ -91,15 +91,15 @@ body {
 }
 
 .titulo-barra-roxa {
-    background-color: #6a1fb9; /* Cor roxa */
+    background-color: #ffffff; /* Cor roxa */
     width: 100%;
     padding: 1em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
 .titulo-barra-roxa h2 {
-    margin-left: 35%;
-    color: white;
+    margin-left: 30%;
+    color: #6a1fb9;
     font-size: 1.5em;
 }
 
