@@ -1,0 +1,234 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: black;
+    padding: 1%;
+    width: 100vw;  /* Garante que ocupa toda a largura da tela */
+    position: fixed;  /* Fixa o header no topo */
+    top: 0;  /* Cola no topo da página */
+    left: 0; /* Garante que começa no canto esquerdo */
+    box-sizing: border-box; /* Garante que padding não afete a largura */
+    border: 1px solid #6a1fb9;  /* Borda fina preta */
+    box-shadow: 2px 2px 8px #6a1fb9; /* Sombra leve */
+    z-index: 1000; /* Garante que o header sempre fique na frente */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1px;
+}
+
+
+.logo {
+    max-width: 6em;
+    margin-left: 2.5%;
+}
+
+h1 {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 1%;
+    flex-grow: 1; /* Ocupa o espaço disponível */
+}
+
+.menu {
+    display: flex;
+    gap: 0.8em; /* Espaçamento entre os itens */
+    margin-right: 2em;
+    position: relative;
+}
+
+.menu h2 {
+    margin: 0;
+    margin-left: 1em;
+    color: white;
+    font-size: 10em;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em; /* Ajusta o tamanho do texto */
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none; /* Para navegadores WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer/Edge */
+    touch-action: manipulation; /* Evita gestos como o "toque longo" ativar a seleção */
+    
+}
+
+.menu h2:hover {
+    color: #872ccd;
+}
+
+.menu h2:active {
+    color: #872ccd;
+}
+.menu a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor do texto original */
+}
+
+.menu a:hover h2 {
+    color: #663399; /* Adiciona um efeito de cor ao passar o mouse */
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;  /* Remove as margens padrão */
+    padding: 0; /* Remove espaçamentos internos */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Garante que o footer fique sempre no final */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o conteúdo ocupar o espaço disponível */
+.main-content {
+    flex: 1; /* Isso empurra o footer para o final */
+}
+
+/* Footer fixo no final */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 3px solid #333;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre a logo e o texto */
+}
+
+.footer-logo {
+    height: 40px; /* Ajuste conforme necessário */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.brand-name {
+    font-weight: bold;
+}
+
+
+/* Responsividade: ajustes para monitores pequenas */
+
+@media (max-width: 1595px) {
+    .header-container {
+        flex-direction: line; /* Empilha os itens na vertical */
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo {
+        max-width: 5%;
+    }
+
+    h1 {
+        font-size: 2vh;
+        text-align: left;
+       
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: line; /* Empilha os itens do menu verticalmente */
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .menu h2 {
+        font-size: 1em; /* Ajusta o tamanho do texto para telas menores */
+        margin-right: 0;
+        
+    }
+
+    #btnTopo {
+        display: block; /* Torna o botão de rolar para o topo visível */
+    }
+}
+
+/* Responsividade: ajustes para dispositivos móveis e telas pequenas */
+
+@media (max-width: 867px) {
+    .header-container {
+        flex-direction: line; /* Empilha os itens na vertical */
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo {
+        max-width: 7.5%;
+    }
+
+    h1 {
+        font-size: 1.6vh;
+        text-align: left;
+       
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: line; /* Empilha os itens do menu verticalmente */
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .menu h2 {
+        font-size: 1em; /* Ajusta o tamanho do texto para telas menores */
+        margin-right: 0;
+        align-items: right;
+    }
+
+    #btnTopo {
+        display: block; /* Torna o botão de rolar para o topo visível */
+    }
+}
+
+/* Responsividade: ajustes para telas muito pequenas (ex: smartphones) */
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    .menu h2 {
+        font-size: 0,5em; /* Ajuste adicional para telas pequenas */
+    }
+
+    .logo {
+        max-width: 1,5em;
+    }
+
+    #btnTopo {
+        bottom: 10px; /* Distância menor do rodapé */
+        right: 10px; /* Distância menor da lateral direita */
+        padding: 8px 12px; /* Botão menor */
+        font-size: 18px; /* Tamanho menor da seta */
+    }
+}
+
+#btnTopo:hover {
+    background-color: #6a1fb9; /* Cor ao passar o mouse */
+}
