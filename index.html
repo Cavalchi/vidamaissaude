@@ -19,103 +19,37 @@
             </div>
         </div>
     </header>
+
+    <!-- Seções de Missão, Visão e Valores -->
+    <div class="container-flex">
+        <!-- Seção à esquerda -->
+        <div class="essencia-proposito">
+            <div class="titulo-barra-roxa">
+                <h2>Essência e Propósito</h2>
+            </div>
+            <div class="texto-barra-preta">
+                <p>
+                    Comprometemo-nos a oferecer soluções acessíveis e inovadoras em planos de saúde, com foco em garantir atendimento humanizado, 
+                    tecnologia avançada e excelência nos serviços, sempre priorizando o bem-estar de nossos clientes. Nosso objetivo é ser referência no setor, 
+                    proporcionando qualidade de vida e acesso eficiente a serviços médicos por meio de práticas éticas, transparentes e sustentáveis. Atuamos com 
+                    paixão pela inovação, buscando aprimorar continuamente a experiência do cliente e fortalecer nossa responsabilidade com a saúde e o meio ambiente.
+                </p>
+            </div>
+        </div>
     
-
-    <!-- Carrossel -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="slide active">
-                <img src="nurse-and-doctor-talking-on-the-office-with-a-pati-2024-12-09-01-17-08-utc.png" class="imgcorpo">
-                <div class="caption">Garantindo o melhor tratamento a você</div>
-            </div>
-            <div class="slide">
-                <img src="spinal-rehabilitation-consultation-2025-02-20-07-06-38-utc.png" class="imgcorpo">
-                <div class="caption">Te indicando para os melhores consultórios</div>
-            </div>
-            <div class="slide">
-                <img src="military-man-visiting-doctor-2025-01-31-06-35-20-utc.png" class="imgcorpo">
-                <div class="caption">sem ideias</div>
-            </div>
-        </div>
-       
-        <!-- Indicadores de bolinhas -->
-        <div class="indicators">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
+        <!-- Seção à direita com imagem -->
+        <div class="imagem-direita">
+            <img src="spinal-rehabilitation-consultation-2025-02-20-07-06-38-utc.png" alt="Consulta de Reabilitação Espinhal" class="imagem-ajustada">
         </div>
     </div>
-    <div>
-        <h2>Nossa missão
-            
-        </h2>
-        <p>
-            Oferecer soluções acessíveis e inovadoras em planos de saúde, garantindo atendimento humanizado, 
-            tecnologia avançada e excelência nos serviços para promover o bem-estar dos nossos clientes.
- 
-        </p>
-    </div>
-    <div>
-        <h2>Nossos valores
-            
-        </h2>
-        <p>
-            Compromisso com a Saúde – Priorizar o bem-estar dos nossos clientes.
-            Excelência no Atendimento – Oferecer suporte de qualidade e humanizado.
-            Inovação – Utilizar tecnologia para otimizar serviços e melhorar a experiência do cliente.
-            Ética e Transparência – Agir com responsabilidade e clareza em todas as relações.
-            Sustentabilidade – Promover práticas responsáveis e sustentáveis no setor da saúde.
- 
-        </p>
-    </div>
-    <div>
-        <h2> Nossa visão</h2>
-        <p> Ser referência em planos de saúde, proporcionando qualidade de vida, 
-                acesso eficiente a serviços médicos e inovação no atendimento ao cliente.
-        </p>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-        let slides = document.querySelectorAll(".slide");
-        let dots = document.querySelectorAll(".dot");
-        let interval;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove("active");
-                dots[i].classList.remove("active");
-            });
-
-            slides[index].classList.add("active");
-            dots[index].classList.add("active");
-        }       
-
-        function currentSlide(index) {
-            slideIndex = index;
-            showSlide(slideIndex);
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            startAutoSlide();
-        });
-    </script>
+    
 </body>
 
+<footer>
+    <div class="footer-container">
+        <img src="WhatsApp_Image_2025-03-20_at_12.10.46-removebg-preview.png" alt="Logo VidaMais Saúde" class="footer-logo">
+        <p><span class="brand-name">® VidaMais Saúde</span> 2025 - Todos os direitos reservados</p>
+    </div>
+</footer>
 
-<button id="btnTopo" onclick="voltarAoTopo()">▲</button>
-<script>
-    var btnTopo = document.getElementById("btnTopo");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            btnTopo.style.display = "block"; 
-        } else {
-            btnTopo.style.display = "none";
-        }
-    };
-    
-    function voltarAoTopo() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-</script>
 </html>
