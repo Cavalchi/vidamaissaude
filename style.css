@@ -1,3 +1,10 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 header {
     background-color: black;
     padding: 1%;
@@ -71,108 +78,107 @@ body {
     overflow-x: hidden; /* Evita rolagem horizontal */
     background-color: rgb(255, 255, 255);
 }
-/* Imagem de fundo estática */
-.imgcorpo {
-    width: 100%; /* Ocupa toda a largura do contêiner */
-    height: auto; /* Mantém a proporção original */
-    max-width: none; /* Remove qualquer limitação de largura */
-    margin-top: 11%;
-    margin-left: 18%; /* Remove margem lateral para ocupar toda a largura */
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    display: block;
-}
-
-
-/* Estilização do carrossel */
-.carousel-container {
-    position: relative;
-    max-width: 70em;
-    margin-left: 15%;
-    overflow: hidden;
-}
-
-/* Slides do carrossel */
-.carousel {
+.container-flex {
     display: flex;
-    transition: transform 0.2s ease-in-out;
+    align-items: flex-start; /* Alinha pelo topo */
+    justify-content: space-between; /* Espaça os elementos à esquerda e à direita */
+    margin: 2em 1em;
 }
 
-.slide {
-    display: none;
-    flex: 0 0 100%;
-    position: relative;
+.essencia-proposito {
+    width: 50%; /* Ocupa metade da largura da tela */
+    margin-top: 5%;
 }
 
-.slide.active {
-    display: block;
+.titulo-barra-roxa {
+    background-color: #6a1fb9; /* Cor roxa */
+    width: 100%;
+    padding: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
-/* Texto sobre a imagem */
-.caption {
-    position: absolute;
-    bottom: 1em;
-    left: 60%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
+
+.titulo-barra-roxa h2 {
+    margin-left: 35%;
     color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 1.5em;
+}
+
+.texto-barra-preta {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    margin-top: 0em;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.texto-barra-preta p {
+    margin: 0;
+    line-height: 1.5em; /* Melhora a legibilidade */
+    font-size: 1.64em;
+}
+
+.imagem-direita {
+    width: 55%; /* Ajusta a largura para caber no layout */
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+.imagem-ajustada {
+    max-width: 100%;
+    height: auto; /* Mantém proporção da imagem */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+
+/* Garante que o footer fique sempre no final */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o conteúdo ocupar o espaço disponível */
+.main-content {
+    flex: 1; /* Isso empurra o footer para o final */
+}
+
+/* Footer fixo no final */
+footer {
+    background-color: black;
+    color: white;
     text-align: center;
+    padding: 15px 0;
+    border-top: 3px solid #333;
+    width: 100%;
 }
 
-
-/* Indicadores (bolinhas) */
-.indicators {
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 15%;
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre a logo e o texto */
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin-left: 1%;
-    background-color: gray;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background 0.3s;
-    cursor: pointer;
-}
-.dot.active {
-    background-color: #872ccd;
+.footer-logo {
+    height: 40px; /* Ajuste conforme necessário */
 }
 
-/* Imagem "visual" fixada na lateral direita 
-.visual {
-    max-width: 120em;
-    position: fixed;
-    right: 2%;
-    bottom: 40%;
-    z-index: 1001; /* Garante que fique na frente 
-}
-*/
-#btnTopo {
-    display: none; /* Começa invisível */
-    position: fixed; /* Fica fixo na tela */
-    bottom: 20px; /* Distância do rodapé */
-    right: 20px; /* Distância da lateral direita */
-    background-color: #872ccd; /* Cor de fundo */
-    color: white; /* Cor do ícone */
-    border: none; /* Remove a borda */
-    padding: 10px 15px; /* Tamanho do botão */
-    font-size: 20px; /* Tamanho da seta */
-    border-radius: 50%; /* Deixa redondo */
-    cursor: pointer; /* Muda cursor para indicar clique */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: opacity 0.3s; /* Animação para sumir/aparecer */
+footer p {
+    font-size: 14px;
+    margin: 0;
 }
 
-#btnTopo:hover {
-    background-color: #6a1fb9; /* Cor ao passar o mouse */
+.brand-name {
+    font-weight: bold;
 }
+
 
 /* Responsividade: ajustes para monitores pequenas */
+
 @media (max-width: 1595px) {
     .header-container {
         flex-direction: line; /* Empilha os itens na vertical */
