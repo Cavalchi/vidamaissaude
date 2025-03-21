@@ -8,6 +8,7 @@ header {
     box-sizing: border-box; /* Garante que padding não afete a largura */
     border: 1px solid #6a1fb9;  /* Borda fina preta */
     box-shadow: 2px 2px 8px #6a1fb9; /* Sombra leve */
+    z-index: 1000; /* Garante que o header sempre fique na frente */
 }
 
 .header-container {
@@ -16,6 +17,7 @@ header {
     justify-content: space-between;
     padding:1px;
 }
+
 
 .logo {
     max-width: 6em;
@@ -67,8 +69,85 @@ body {
     margin: 0;  /* Remove as margens padrão */
     padding: 0; /* Remove espaçamentos internos */
     overflow-x: hidden; /* Evita rolagem horizontal */
+    background-color: rgb(255, 255, 255);
+}
+/* Imagem de fundo estática */
+.imgcorpo {
+    max-width: 70em;
+    margin-top: 5%;
+    margin-left: 20%;
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    display: block;
+}
+/* Estilização do carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 70em;
+    margin-left: 15%;
+    overflow: hidden;
 }
 
+/* Slides do carrossel */
+.carousel {
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+}
+
+.slide {
+    display: none;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+/* Texto sobre a imagem */
+.caption {
+    position: absolute;
+    bottom: 1em;
+    left: 60%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+/* Indicadores (bolinhas) */
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin-left: 1%;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #872ccd;
+}
+
+/* Imagem "visual" fixada na lateral direita 
+.visual {
+    max-width: 120em;
+    position: fixed;
+    right: 2%;
+    bottom: 40%;
+    z-index: 1001; /* Garante que fique na frente 
+}
+*/
 #btnTopo {
     display: none; /* Começa invisível */
     position: fixed; /* Fica fixo na tela */
