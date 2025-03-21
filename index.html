@@ -24,19 +24,18 @@
     <div class="carousel-container">
         <div class="carousel">
             <div class="slide active">
-                <img src="nurse-and-doctor-talking-on-the-office-with-a-pati-2024-12-09-01-17-08-utc.jpg" class="imgcorpo">
+                <img src="nurse-and-doctor-talking-on-the-office-with-a-pati-2024-12-09-01-17-08-utc.png" class="imgcorpo">
                 <div class="caption">Garantindo o melhor tratamento a você</div>
             </div>
             <div class="slide">
-                <img src="spinal-rehabilitation-consultation-2025-02-20-07-06-38-utc.jpg" class="imgcorpo">
+                <img src="spinal-rehabilitation-consultation-2025-02-20-07-06-38-utc.png" class="imgcorpo">
                 <div class="caption">Te indicando para os melhores consultórios</div>
             </div>
             <div class="slide">
-                <img src="military-man-visiting-doctor-2025-01-31-06-35-20-utc.jpg" class="imgcorpo">
+                <img src="military-man-visiting-doctor-2025-01-31-06-35-20-utc.png" class="imgcorpo">
                 <div class="caption">sem ideias</div>
             </div>
         </div>
-
        
         <!-- Indicadores de bolinhas -->
         <div class="indicators">
@@ -60,25 +59,11 @@
 
             slides[index].classList.add("active");
             dots[index].classList.add("active");
-        }
-
-        function nextSlide() {
-            slideIndex = (slideIndex + 1) % slides.length;
-            showSlide(slideIndex);
-        }
-
-        function prevSlide() {
-            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-            showSlide(slideIndex);
-        }
+        }       
 
         function currentSlide(index) {
             slideIndex = index;
             showSlide(slideIndex);
-        }
-
-        function startAutoSlide() {
-            interval = setInterval(nextSlide, 5000); // Troca a cada 5s
         }
 
         document.addEventListener("DOMContentLoaded", () => {
