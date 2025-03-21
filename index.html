@@ -15,17 +15,82 @@
             <div class="menu">
                 <h2>Pessoas</h2>
                 <h2>Carreira</h2>
-                <h2>Fale Conosco</h2>>
+                <h2>Fale Conosco</h2>
             </div>
         </div>
     </header>
+
+    <!-- Carrossel -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="nurse-and-doctor-talking-on-the-office-with-a-pati-2024-12-09-01-17-08-utc.jpg" class="imgcorpo">
+                <div class="caption">Garantindo o melhor tratamento a você</div>
+            </div>
+            <div class="slide">
+                <img src="spinal-rehabilitation-consultation-2025-02-20-07-06-38-utc.jpg" class="imgcorpo">
+                <div class="caption">Te indicando para os melhores consultórios</div>
+            </div>
+            <div class="slide">
+                <img src="military-man-visiting-doctor-2025-01-31-06-35-20-utc.jpg" class="imgcorpo">
+                <div class="caption">sem ideias</div>
+            </div>
+        </div>
+
+       
+        <!-- Indicadores de bolinhas -->
+        <div class="indicators">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slides = document.querySelectorAll(".slide");
+        let dots = document.querySelectorAll(".dot");
+        let interval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                dots[i].classList.remove("active");
+            });
+
+            slides[index].classList.add("active");
+            dots[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index;
+            showSlide(slideIndex);
+        }
+
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 5000); // Troca a cada 5s
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            startAutoSlide();
+        });
+    </script>
 </body>
+
+
 <button id="btnTopo" onclick="voltarAoTopo()">▲</button>
 <script>
-    // Seleciona o botão
     var btnTopo = document.getElementById("btnTopo");
-
-    // Mostra ou esconde o botão conforme o scrol
     window.onscroll = function () {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             btnTopo.style.display = "block"; 
